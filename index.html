@@ -3,310 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CJ Estudio Creativo | Estrategia de Marca para Pymes</title>
-    <meta name="description" content="Agencia de marketing digital y branding. Convertimos negocios en marcas de autoridad.">
+    <title>CJ Estudio Creativo | Arquitectura de Marca y Estrategia Digital</title>
     <style>
-        /* --- ESTILOS GENERALES Y PALETA DE COLORES --- */
         :root {
-            --azul-petroleo: #0f4c5c; /* Autoridad */
-            --gris-pizarra: #333333; /* Texto técnico */
-            --blanco-humo: #f4f4f4; /* Fondo limpio */
-            --blanco: #ffffff;
-            --whatsapp: #25D366; /* Color oficial WA */
-            --acento: #e36414; /* Pequeños detalles para contraste */
+            --azul-petroleo: #0f4c5c;
+            --gris-pizarra: #333333;
+            --blanco-humo: #f4f4f4;
+            --whatsapp: #25D366;
+            --acento: #e36414;
         }
 
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--gris-pizarra);
-            line-height: 1.6;
-            background-color: var(--blanco-humo);
-        }
-
-        h1, h2, h3 {
-            color: var(--azul-petroleo);
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* --- BOTONES --- */
-        .btn-main {
-            display: inline-block;
-            background-color: var(--whatsapp);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .btn-main:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-
-        /* --- HEADER --- */
-        header {
-            background-color: var(--blanco);
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--azul-petroleo);
-            letter-spacing: -1px;
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            background: linear-gradient(135deg, var(--azul-petroleo) 0%, #002b36 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            color: white;
-            font-size: 2.5rem;
-            max-width: 800px;
-            margin: 0 auto 20px auto;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-            opacity: 0.9;
-        }
-
-        /* --- PROBLEMA / AGITACIÓN --- */
-        .pain-points {
-            padding: 60px 0;
-            background-color: var(--blanco);
-            text-align: center;
-        }
-
-        .pain-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .pain-card {
-            background: var(--blanco-humo);
-            padding: 30px;
-            border-radius: 8px;
-            border-left: 5px solid var(--azul-petroleo);
-            text-align: left;
-        }
-
-        /* --- PORTAFOLIO / PRUEBA SOCIAL --- */
-        .portfolio {
-            padding: 60px 0;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .portfolio-item {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .portfolio-tag {
-            background-color: #e2e8f0;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: var(--azul-petroleo);
-        }
-
-        /* --- OBJECIONES Y CIERRE --- */
-        .why-us {
-            background-color: var(--azul-petroleo);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; color: var(--gris-pizarra); background-color: var(--blanco-humo); line-height: 1.6; }
+        .container { width: 90%; max-width: 1100px; margin: 0 auto; }
         
-        .why-us h2 { color: white; }
+        /* HEADER */
+        header { background: white; padding: 10px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 65px; width: auto; }
 
-        .features {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .feature {
-            flex-basis: 30%;
-            min-width: 250px;
-            margin-bottom: 20px;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #1a202c;
-            color: #718096;
+        /* HERO SECTION */
+        .hero { 
+            padding: 120px 20px; 
+            background: linear-gradient(rgba(15, 76, 92, 0.88), rgba(0, 43, 54, 0.88)), url('portada.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white; 
             text-align: center;
-            padding: 40px 0;
-            font-size: 0.9rem;
         }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.3rem; opacity: 0.95; max-width: 800px; margin: 0 auto 35px; }
+        
+        .btn-wa { 
+            display: inline-block; 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 22px 45px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1.2rem; 
+            transition: 0.3s; 
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        }
+        .btn-wa:hover { transform: scale(1.05); background: #20ba5a; }
 
-        /* --- BOTÓN FLOTANTE WHATSAPP --- */
-        .float-wa {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: var(--whatsapp);
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-        }
+        /* SECCIÓN PROBLEMA (PAS) */
+        .pas-section { padding: 80px 20px; text-align: center; background: white; }
+        .pas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .pas-card { padding: 30px; background: var(--blanco-humo); border-radius: 10px; border-bottom: 4px solid var(--azul-petroleo); text-align: left; }
+        .pas-card h3 { color: var(--azul-petroleo); margin-top: 0; }
+
+        /* PORTAFOLIO / CASOS DE ÉXITO */
+        .portfolio { padding: 80px 20px; background: #f9f9f9; text-align: center; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
+        .portfolio-item { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .tag { font-size: 0.7rem; font-weight: bold; text-transform: uppercase; color: var(--acento); letter-spacing: 1px; }
+
+        /* REDES SOCIALES */
+        .social-section { padding: 70px 20px; background: white; text-align: center; }
+        .social-links { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin-top: 40px; }
+        .social-card { text-decoration: none; color: var(--gris-pizarra); font-weight: 600; transition: 0.3s; display: flex; flex-direction: column; align-items: center; }
+        .social-card:hover { color: var(--azul-petroleo); transform: translateY(-5px); }
+        .social-card img { width: 50px; margin-bottom: 10px; }
+
+        /* FOOTER */
+        footer { padding: 60px 20px; background: #111; color: #888; text-align: center; border-top: 4px solid var(--azul-petroleo); }
+        .footer-logo { color: white; font-weight: bold; font-size: 1.4rem; margin-bottom: 15px; display: block; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .float-wa { right: 20px; bottom: 20px; }
+            .hero h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <div class="logo">CJ. ESTUDIO CREATIVO</div>
-            <a href="#proyectos" style="text-decoration: none; color: var(--azul-petroleo); font-weight: bold;">Ver Resultados</a>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="Logotipo.jpg" alt="CJ ESTUDIO CREATIVO">
+            </div>
+            <a href="https://wa.me/59172691884" style="color: var(--azul-petroleo); font-weight: bold; text-decoration: none;">Contacto Directo</a>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <h1>¿Su imagen actual está ahuyentando a sus mejores clientes?</h1>
-            <p>Deje de competir por precio y empiece a competir por valor. Desarrollamos identidades visuales estratégicas para Pymes que buscan crecimiento medible.</p>
-            <a href="https://wa.me/59172691884?text=Hola%20CJ%20Estudio,%20vi%20su%20web.%20Soy%20dueño%20de%20negocio%20y%20quiero%20mejorar%20mi%20imagen%20para%20vender%20más." class="btn-main" target="_blank">
-                SOLICITAR AUDITORÍA DE MARCA
+            <h1>¿Su marca proyecta el valor real de su negocio?</h1>
+            <p>Deje de competir por precio. Ayudamos a Pymes a construir autoridad mediante identidad visual técnica y gestión de riesgo digital.</p>
+            <a href="https://wa.me/59172691884?text=Hola%20CJ%20Estudio,%20vi%20su%20web.%20Soy%20dueño%20de%20negocio%20y%20quiero%20mejorar%20mi%20presencia%20digital." class="btn-wa" target="_blank">
+                SOLICITAR AUDITORÍA VÍA WHATSAPP
             </a>
-            <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.8;">Respuesta directa al +591 7269 1884</p>
         </div>
     </section>
 
-    <section class="pain-points">
+    <section class="pas-section">
         <div class="container">
-            <h2>La desconfianza es el enemigo de la venta</h2>
-            <p style="max-width: 700px; margin: 0 auto;">Si su empresa es profesional, pero su huella digital parece improvisada, está asumiendo un riesgo innecesario. Las agencias generalistas hacen "ruido"; nosotros construimos autoridad.</p>
-            
-            <div class="pain-grid">
-                <div class="pain-card">
-                    <h3>❌ Identidad Visual Débil</h3>
-                    <p>Logotipos y colores que no transmiten la solidez de su empresa, haciendo que los clientes cuestionen sus precios.</p>
+            <h2>La desconfianza es el enemigo de su facturación</h2>
+            <p>Si su empresa es profesional pero su imagen parece improvisada, está regalando clientes a la competencia.</p>
+            <div class="pas-grid">
+                <div class="pas-card">
+                    <h3>❌ Imagen Débil</h3>
+                    <p>Logotipos que no transmiten la solidez de su trabajo y ahuyentan a clientes de alto valor.</p>
                 </div>
-                <div class="pain-card">
-                    <h3>❌ Redes Sin Estrategia</h3>
-                    <p>Publicar por publicar sin un objetivo de venta claro. Likes que no se convierten en facturación.</p>
+                <div class="pas-card">
+                    <h3>❌ Redes Sin Rumbo</h3>
+                    <p>Publicaciones que no educan ni venden. Likes que no se traducen en dinero real.</p>
                 </div>
-                <div class="pain-card">
-                    <h3>❌ Falta de Tiempo</h3>
-                    <p>Usted debe dirigir su negocio, no estar diseñando posts en Canva ni persiguiendo freelancers.</p>
+                <div class="pas-card">
+                    <h3>❌ Riesgo Digital</h3>
+                    <p>Falta de estrategia en la gestión de crisis y comunicación comercial efectiva.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="proyectos" class="portfolio">
+    <section class="portfolio">
         <div class="container">
-            <h2 style="text-align: center;">Casos de Estudio Recientes</h2>
-            <p style="text-align: center; margin-bottom: 40px;">No vendemos dibujos, vendemos arquitectura comercial.</p>
-            
+            <h2>Resultados de nuestro Portafolio</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <span class="portfolio-tag">Sector Natural / Retail</span>
-                    <h3>Cuatro Elementos</h3>
-                    <p>Desarrollo completo de identidad visual. Transmisión de frescura y autenticidad para productos naturales.</p>
-                    <p><em>Resultado: Coherencia visual en todos los puntos de contacto.</em></p>
-                </div>
-
-                <div class="portfolio-item">
-                    <span class="portfolio-tag">Sector Salud</span>
+                    <span class="tag">Sector Salud</span>
                     <h3>Neomed / Bio Diagnóstico</h3>
-                    <p>Identidad corporativa para el sector médico. Colores y tipografías que proyectan tecnología, precisión y confianza.</p>
-                    <p><em>Resultado: Aumento en la percepción de profesionalismo médico.</em></p>
+                    <p>Identidad visual técnica que proyecta precisión, tecnología y confianza médica.</p>
                 </div>
-
                 <div class="portfolio-item">
-                    <span class="portfolio-tag">Arquitectura</span>
-                    <h3>Arje Arquitectura</h3>
-                    <p>Consolidación de identidad visual técnica. Un lenguaje gráfico sobrio para ingenieros y arquitectos.</p>
-                    <p><em>Resultado: Marca lista para licitaciones de alto nivel.</em></p>
+                    <span class="tag">Sector Natural</span>
+                    <h3>Cuatro Elementos</h3>
+                    <p>Branding completo enfocado en frescura y conexión natural para el mercado retail.</p>
                 </div>
-            </div>
-             <div style="text-align: center; margin-top: 30px;">
-                <a href="https://wa.me/59172691884?text=Hola,%20quisiera%20ver%20el%20portafolio%20completo%20en%20PDF." style="color: var(--azul-petroleo); font-weight: bold;">Solicitar Portafolio Completo en PDF &rarr;</a>
+                <div class="portfolio-item">
+                    <span class="tag">Arquitectura</span>
+                    <h3>Arje Arquitectura</h3>
+                    <p>Imagen corporativa sólida para profesionales de la construcción y diseño técnico.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="why-us">
+    <section class="social-section">
         <div class="container">
-            <h2>¿Por qué CJ Estudio Creativo?</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>🛡️ Gestión de Riesgo</h3>
-                    <p>Minimizamos la incertidumbre con procesos claros y entregables definidos.</p>
-                </div>
-                <div class="feature">
-                    <h3>📐 Metodología Técnica</h3>
-                    <p>No improvisamos. Cada color y forma tiene una razón comercial.</p>
-                </div>
-                <div class="feature">
-                    <h3>🤝 Trato Directo</h3>
-                    <p>Sin burocracia. Hable directamente con quien ejecuta su estrategia.</p>
-                </div>
-            </div>
-            
-            <div style="margin-top: 40px;">
-                <h3 style="color: white;">¿Listo para escalar su marca?</h3>
-                <a href="https://wa.me/59172691884?text=Hola%20CJ%20Estudio,%20vi%20su%20web.%20Soy%20dueño%20de%20negocio%20y%20quiero%20mejorar%20mi%20imagen%20para%20vender%20más." class="btn-main" style="background-color: white; color: var(--azul-petroleo);">
-                    HABLAR CON UN ESTRATEGA AHORA
+            <h2>Conecte con nuestra comunidad</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/C.j.estudioo" target="_blank" class="social-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/c.j.estudio/" target="_blank" class="social-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                    <span>Instagram</span>
                 </a>
             </div>
         </div>
@@ -314,16 +159,12 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 CJ Estudio Creativo. Todos los derechos reservados.</p>
+            <span class="footer-logo">CJ. ESTUDIO CREATIVO</span>
+            <p>Estrategia, Diseño y Crecimiento Digital</p>
             <p>Santa Cruz, Bolivia | +591 7269 1884</p>
+            <p style="margin-top:30px; font-size: 0.7rem; opacity: 0.5;">© 2024 Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <a href="https://wa.me/59172691884?text=Hola%20CJ%20Estudio,%20vi%20su%20web.%20Soy%20dueño%20de%20negocio%20y%20quiero%20mejorar%20mi%20imagen%20para%20vender%20más." class="float-wa" target="_blank">
-        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 17.653C17.29 17.551 16.398 17.098 16.233 17.034C16.069 16.971 15.949 16.938 15.829 17.13C15.71 17.321 15.367 17.747 15.263 17.876C15.158 18.003 15.053 18.024 14.872 17.918C14.69 17.811 14.106 17.604 13.413 16.953C12.871 16.444 12.505 15.815 12.4 15.622C12.295 15.43 12.389 15.32 12.48 15.221C12.56 15.132 12.659 15.004 12.748 14.896C12.838 14.789 12.868 14.704 12.928 14.575C12.987 14.446 12.958 14.339 12.913 14.233C12.868 14.126 12.494 13.166 12.345 12.781C12.193 12.406 12.043 12.454 11.931 12.454C11.826 12.454 11.706 12.454 11.586 12.454C11.466 12.454 11.271 12.508 11.107 12.7C10.942 12.893 10.478 13.364 10.478 14.326C10.478 15.289 11.122 16.21 11.212 16.338C11.302 16.467 12.441 18.428 14.28 19.309C15.808 20.04 16.166 19.89 16.631 19.825C17.096 19.761 18.069 19.204 18.263 18.605C18.458 18.006 18.458 17.493 18.398 17.385C18.338 17.278 18.158 17.214 17.978 17.108H17.472Z" fill="white"/>
-        </svg>
-    </a>
 
 </body>
 </html>
