@@ -17,8 +17,10 @@
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: var(--blanco); }
         .container { width: 90%; max-width: 1100px; margin: 0 auto; }
         
-        header { background: white; padding: 20px 0; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .logo-img { height: 60px; width: auto; display: block; margin: 0 auto; }
+        /* HEADER - LOGO A LA DERECHA */
+        header { background: white; padding: 15px 0; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: flex-end; align-items: center; }
+        .logo-img { height: 50px; width: auto; }
 
         .hero { 
             padding: 120px 20px; 
@@ -56,7 +58,13 @@
         
         .social { padding: 80px 20px; background: white; text-align: center; border-top: 1px solid #eee; }
         .social-links { display: flex; justify-content: center; gap: 30px; margin-top: 30px; }
-        .social-links img { width: 40px; opacity: 0.8; }
+        .social-links img { width: 40px; opacity: 0.8; transition: 0.3s; }
+        .social-links img:hover { opacity: 1; transform: scale(1.1); }
+
+        /* SECCIÓN FINAL CTA AJUSTADA */
+        .final-cta { padding: 100px 20px; background: var(--gris-claro); text-align: center; border-top: 1px solid #eee; }
+        .final-cta h2 { font-size: 2.2rem; color: var(--azul-oscuro); max-width: 800px; margin: 0 auto 40px; font-weight: 700; font-style: italic; }
+        .logo-bottom { height: 80px; width: auto; margin: 50px auto 0; display: block; opacity: 0.8; }
 
         footer { padding: 60px 20px; background: var(--azul-oscuro); color: white; text-align: center; }
     </style>
@@ -64,7 +72,7 @@
 <body>
 
     <header>
-        <div class="container">
+        <div class="container header-content">
             <img src="Logo.jpg" alt="CJ Estudio Creativo" class="logo-img">
         </div>
     </header>
@@ -149,17 +157,14 @@
             </div>
         </div>
     </section>
+
     <section class="final-cta">
         <div class="container">
             <h2>"Las marcas que hoy dominan su sector empezaron con una sola decisión."</h2>
             <a href="https://wa.me/59172691884?text=Hola%20CJ%20Estudio,%20he%20decidido%20escalar%20mi%20marca.%20Quiero%20aplicar%20ahora." class="btn-apply">
                 Aplicar ahora
             </a>
-                        
-            <div class="social-links">
-                <a href="https://www.facebook.com/C.j.estudioo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"></a>
-                <a href="https://www.instagram.com/c.j.estudio/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG"></a>
-            </div>
+            <img src="Logo.jpg" alt="CJ Estudio Creativo" class="logo-bottom">
         </div>
     </section>
 
@@ -173,3 +178,4 @@
 
 </body>
 </html>
+
