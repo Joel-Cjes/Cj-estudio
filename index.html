@@ -3,60 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CJ Estudio Creativo | Expertos en Crecimiento Digital</title>
+    <title>CJ Estudio Creativo | Partner de Crecimiento Estratégico</title>
     <style>
         :root {
             --azul-petroleo: #0f4c5c;
-            --gris-pizarra: #333333;
-            --blanco-humo: #f4f4f4;
+            --azul-oscuro: #002b36;
             --whatsapp: #25D366;
-            --acento: #e36414;
+            --dorado: #b8926a;
+            --blanco: #ffffff;
+            --gris-claro: #f8f9fa;
         }
 
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; color: var(--gris-pizarra); background-color: var(--blanco-humo); line-height: 1.6; }
-        .container { width: 90%; max-width: 1100px; margin: 0 auto; text-align: center; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: var(--blanco); }
+        .container { width: 90%; max-width: 1100px; margin: 0 auto; }
         
-        /* HEADER - LOGO CORREGIDO */
-        header { background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        .logo-img { height: 85px; width: auto; display: block; margin: 0 auto; }
+        header { background: white; padding: 20px 0; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo-img { height: 60px; width: auto; display: block; margin: 0 auto; }
 
-        /* HERO SECTION CON PORTADA */
         .hero { 
-            padding: 100px 20px; 
-            background: linear-gradient(rgba(15, 76, 92, 0.9), rgba(0, 43, 54, 0.9)), url('portada.jpg');
+            padding: 120px 20px; 
+            background: linear-gradient(rgba(0, 43, 54, 0.92), rgba(0, 43, 54, 0.92)), url('portada.jpg');
             background-size: cover; background-position: center; background-attachment: fixed;
-            color: white; 
+            color: white; text-align: center;
         }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 800; line-height: 1.2; }
-        .hero p { font-size: 1.2rem; max-width: 750px; margin: 0 auto 30px; opacity: 0.95; }
+        .hero h1 { font-size: 3.2rem; margin-bottom: 25px; font-weight: 800; letter-spacing: -1px; }
+        .hero p { font-size: 1.4rem; max-width: 850px; margin: 0 auto 40px; opacity: 0.9; font-weight: 300; }
         
-        /* BOTONES */
-        .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
-        .btn { padding: 18px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; display: inline-block; }
-        .btn-wa { background: var(--whatsapp); color: white; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
-        .btn-pdf { background: white; color: var(--azul-petroleo); border: 2px solid white; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+        .btn-apply { 
+            display: inline-block; background: var(--whatsapp); color: white; padding: 22px 50px; 
+            border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 1.2rem; 
+            transition: 0.3s; text-transform: uppercase; letter-spacing: 1px;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+        .btn-apply:hover { transform: translateY(-3px); background: #1eb956; }
 
-        /* INDICADORES DE AUTORIDAD */
-        .stats { padding: 50px 20px; background: var(--azul-petroleo); color: white; display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; }
-        .stat-item h2 { font-size: 3rem; margin: 0; color: white; font-weight: 800; }
-        .stat-item p { margin: 5px 0 0; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; opacity: 0.8; }
+        .stats { background: var(--azul-oscuro); color: white; padding: 60px 0; display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; }
+        .stat-item h2 { font-size: 3rem; margin: 0; color: var(--dorado); }
+        .stat-item p { margin: 5px 0 0; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; opacity: 0.7; }
 
-        /* SECCIÓN EXPERIENCIA / PAS */
-        .experience { padding: 80px 20px; background: white; }
-        .experience h2 { color: var(--azul-petroleo); font-size: 2.2rem; margin-bottom: 40px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { padding: 40px 30px; background: #f9f9f9; border-radius: 15px; text-align: left; border-left: 5px solid var(--azul-petroleo); }
-        .card h3 { margin-top: 0; color: var(--azul-petroleo); }
+        .portfolio { padding: 100px 20px; background: var(--gris-claro); text-align: center; }
+        .portfolio h2 { font-size: 2.5rem; color: var(--azul-petroleo); margin-bottom: 50px; }
+        .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .method-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; border-top: 5px solid var(--dorado); }
+        .method-card h3 { color: var(--azul-petroleo); font-size: 1.5rem; margin-top: 0; }
+        .tag { font-size: 0.8rem; color: var(--dorado); font-weight: bold; text-transform: uppercase; }
 
-        /* SOCIAL */
-        .social { padding: 60px 20px; background: white; border-top: 1px solid #eee; }
-        .social-links { display: flex; justify-content: center; gap: 40px; margin-top: 30px; }
-        .social-links img { width: 50px; transition: 0.3s; }
-        .social-links a:hover img { transform: scale(1.1); }
+        .process { padding: 100px 20px; text-align: center; }
+        .process h2 { margin-bottom: 60px; font-size: 2.5rem; }
+        .diagram { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+        .step { flex: 1; min-width: 250px; padding: 20px; }
+        .step-num { width: 50px; height: 50px; background: var(--azul-petroleo); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 800; }
+        
+        .social { padding: 80px 20px; background: white; text-align: center; border-top: 1px solid #eee; }
+        .social-links { display: flex; justify-content: center; gap: 30px; margin-top: 30px; }
+        .social-links img { width: 40px; opacity: 0.8; }
 
-        footer { padding: 50px 20px; background: #111; color: white; text-align: center; }
-        footer p { opacity: 0.6; font-size: 0.8rem; margin-top: 20px; }
+        footer { padding: 60px 20px; background: var(--azul-oscuro); color: white; text-align: center; }
     </style>
 </head>
 <body>
@@ -69,50 +71,70 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Arquitectura Visual para Pymes que buscan Escalabilidad</h1>
-            <p>No vendemos diseños, vendemos herramientas de gestión de riesgo y autoridad comercial para empresas serias.</p>
-            
-            <div class="btn-group">
-                <a href="https://wa.me/59172691884?text=Hola%20CJ%20Estudio,%20quiero%20mejorar%20mis%20resultados%20digitales." class="btn btn-wa" target="_blank">
-                    AGENDAR AUDITORÍA WHATSAPP
-                </a>
-                <a href="https://wa.me/59172691884?text=Hola,%20solicito%20el%20portafolio%20PDF%20de%20CJ%20Estudio%20Creativo." class="btn btn-pdf">
-                    SOLICITAR PORTAFOLIO PDF
-                </a>
-            </div>
+            <h1>No creamos diseños.<br>Creamos sistemas visuales que activan ventas.</h1>
+            <p>Transformamos Pymes en marcas de autoridad mediante ingeniería visual y blindaje estratégico de activos digitales.</p>
+            <a href="https://wa.me/59172691884?text=Hola%20CJ%20Estudio,%20quiero%20aplicar%20para%20una%20sesión%20estratégica." class="btn-apply">
+                Aplicar para una sesión estratégica
+            </a>
         </div>
     </section>
 
     <section class="stats">
         <div class="stat-item">
             <h2>+5 Años</h2>
-            <p>De Experiencia</p>
+            <p>Rubro Creativo</p>
         </div>
         <div class="stat-item">
             <h2>+10 Empresas</h2>
-            <p>Casos de Éxito</p>
+            <p>Casos de Escala</p>
         </div>
         <div class="stat-item">
             <h2>100%</h2>
-            <p>Resultados Técnicos</p>
+            <p>Compromiso Técnico</p>
         </div>
     </section>
 
-    <section class="experience">
+    <section class="portfolio">
         <div class="container">
-            <h2>Solidez en cada proyecto</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Identidad Corporativa</h3>
-                    <p>Diseño técnico para sectores de alta exigencia como Neomed (Salud) y Arje (Arquitectura).</p>
+            <h2>Casos de Éxito: Sistema de Autoridad Visual</h2>
+            <div class="method-grid">
+                <div class="method-card">
+                    <span class="tag">Productos Naturales</span>
+                    <h3>Cuatro Elementos</h3>
+                    <p>Desarrollo de identidad visual completa orientada a transmitir frescura y autenticidad para conectar con el consumidor final[cite: 1, 3].</p>
                 </div>
-                <div class="card">
-                    <h3>Gestión de Riesgo</h3>
-                    <p>Protegemos la reputación de su marca con estrategias de comunicación inteligente y medible.</p>
+                <div class="method-card">
+                    <span class="tag">Construcción & Arquitectura</span>
+                    <h3>Arje Arquitectura</h3>
+                    <p>Consolidación de imagen corporativa para un grupo de profesionales, incluyendo arquitectura de marca y papelería técnica[cite: 5, 6].</p>
                 </div>
-                <div class="card">
-                    <h3>Marketing Estratégico</h3>
-                    <p>Transformamos su presencia en redes sociales en un canal activo de captación de leads calificados.</p>
+                <div class="method-card">
+                    <span class="tag">Gestión Estratégica</span>
+                    <h3>Método de Blindaje</h3>
+                    <p>Protección de la reputación digital y creación de activos visuales diseñados para la escalabilidad del negocio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <h2>Nuestro Método de Trabajo</h2>
+            <div class="diagram">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h4>Auditoría Comercial</h4>
+                    <p>Detectamos fugas de confianza en su imagen actual y oportunidades de mercado.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h4>Arquitectura Visual</h4>
+                    <p>Construimos el sistema de activos (logos, tipografías y patrones) diseñados para vender.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h4>Despliegue Estratégico</h4>
+                    <p>Lanzamos su nueva autoridad al mercado bajo un esquema de blindaje de marca.</p>
                 </div>
             </div>
         </div>
@@ -120,23 +142,18 @@
 
     <section class="social">
         <div class="container">
-            <h2>Nuestras Redes Oficiales</h2>
+            <h3>Síganos en nuestras redes</h3>
             <div class="social-links">
-                <a href="https://www.facebook.com/C.j.estudioo" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com/c.j.estudio/" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-                </a>
+                <a href="https://www.facebook.com/C.j.estudioo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"></a>
+                <a href="https://www.instagram.com/c.j.estudio/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG"></a>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <h3>CJ. ESTUDIO CREATIVO</h3>
+            <p><strong>CJ. ESTUDIO CREATIVO</strong></p>
             <p>Santa Cruz, Bolivia | +591 7269 1884</p>
-            <p>© 2026 Todos los derechos reservados.</p>
         </div>
     </footer>
 
