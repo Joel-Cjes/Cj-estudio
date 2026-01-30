@@ -96,7 +96,47 @@ src="https://www.facebook.com/tr?id=1951859152369624&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->   
 </head>
 <body>
+<div style="background-color: #011f26; color: #D4AF37; padding: 15px 0; text-align: center; border-bottom: 2px solid #D4AF37; font-family: 'Segoe UI', sans-serif; width: 100%;">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; font-weight: bold; font-size: 14px; letter-spacing: 1.5px;">
+        
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 20px;">🛡️</span>
+            <span>+<span id="count-anos" style="font-size: 22px;">0</span> AÑOS EN EL MERCADO</span>
+        </div>
 
+        <span style="color: #D4AF37; opacity: 0.3; font-size: 25px;">|</span>
+
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 20px;">🤝</span>
+            <span>+<span id="count-clientes" style="font-size: 22px;">0</span> CLIENTES DE ÉLITE</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Función para la animación de números
+    function animateCount(id, target, duration) {
+        let start = 0;
+        let obj = document.getElementById(id);
+        let range = target - start;
+        let increment = target > start ? 1 : -1;
+        let stepTime = Math.abs(Math.floor(duration / range));
+        
+        let timer = setInterval(function() {
+            start += increment;
+            obj.innerText = start;
+            if (start == target) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    // Iniciar animación al cargar la página
+    window.onload = function() {
+        animateCount("count-anos", 3, 1000);      // Llega a 3 en 1 segundo
+        animateCount("count-clientes", 30, 1500); // Llega a 30 en 1.5 segundos
+    };
+</script>
     <header>
         <div class="container header-content">
             <img src="Logo.jpg" alt="CJ Estudio Creativo" class="logo-img">
@@ -105,7 +145,7 @@ src="https://www.facebook.com/tr?id=1951859152369624&ev=PageView&noscript=1"
 
     <section class="hero">
         <div class="container">
-            <h1>No creamos diseños.<br>Creamos sistemas visuales que activan ventas.</h1>
+            <h1>No creamos diseños.<br>creamos sistemas visuales que activan ventas.</h1>
             <p>Transformamos negocios en marcas de autoridad mediante ingeniería visual y blindaje estratégico.</p>
             <a href="https://wa.me/59172691884?text=Hola%20CJ%20Estudio,%20quiero%20aplicar%20para%20una%20sesión%20estratégica." class="btn-apply btn-hero">
                 Aplicar para una sesión estratégica
